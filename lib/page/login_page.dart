@@ -96,8 +96,7 @@ class LoginPageState extends State<LoginPage> {
 
                             dbCon.containsKey("auth").then((bool val) {
                               if (val) {
-                                Navigator.of(context)
-                                    .pushNamed(YcsRoute.dashboard);
+                                Navigator.of(context).pushNamed(YcsRoute.prawn);
 
                                 //print("after customer page navigation");
                               } else {

@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:me_arun/config/config.dart';
-import 'package:me_arun/config/ycs_route.dart';
 import 'package:me_arun/page/tpl/common_drawer.dart';
 import 'package:me_arun/util/translations.dart';
 
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
-class DashboardPage extends StatefulWidget {
-  _DashboardPageState createState() => _DashboardPageState();
+class PrawnPage extends StatefulWidget {
+  _PrawnPageState createState() => _PrawnPageState();
 }
 
-class _DashboardPageState extends State<DashboardPage> {
+class _PrawnPageState extends State<PrawnPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -66,38 +65,36 @@ class _DashboardPageState extends State<DashboardPage> {
                       ),
                     ),
                     _buildTile(
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Stack(children: <Widget>[
-                            Material(
-                                borderRadius: BorderRadius.circular(12.0),
-                                child: Center(
-                                    child: Padding(
-                                        padding: const EdgeInsets.all(1.0),
-                                        child: Image.asset(
-                                            "assets/images/fish.png")))),
-                            new Positioned(
-                              left: 10.0,
-                              top: 10.0,
-                              child: Text(
-                                  Translations.of(context).text("Fresh Fish"),
-                                  style: TextStyle(
-                                      color:
-                                          Theme.of(context).primaryColorDark)),
-                            ),
-                            new Positioned(
-                              right: 10.0,
-                              bottom: 10.0,
-                              child: Text(
-                                  Translations.of(context)
-                                      .text("Starts at 350 / Kg"),
-                                  style: TextStyle(
-                                      color:
-                                          Theme.of(context).primaryColorDark)),
-                            ),
-                          ]),
-                        ),
-                        onTap: onTapToCallFishPage),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Stack(children: <Widget>[
+                          Material(
+                              borderRadius: BorderRadius.circular(12.0),
+                              child: Center(
+                                  child: Padding(
+                                      padding: const EdgeInsets.all(1.0),
+                                      child: Image.asset(
+                                          "assets/images/fish.png")))),
+                          new Positioned(
+                            left: 10.0,
+                            top: 10.0,
+                            child: Text(
+                                Translations.of(context).text("Fresh Fish"),
+                                style: TextStyle(
+                                    color: Theme.of(context).primaryColorDark)),
+                          ),
+                          new Positioned(
+                            right: 10.0,
+                            bottom: 10.0,
+                            child: Text(
+                                Translations.of(context)
+                                    .text("Starts at 350 / Kg"),
+                                style: TextStyle(
+                                    color: Theme.of(context).primaryColorDark)),
+                          ),
+                        ]),
+                      ),
+                    ),
                     _buildTile(
                       Padding(
                         padding: const EdgeInsets.all(10.0),
@@ -210,23 +207,18 @@ class _DashboardPageState extends State<DashboardPage> {
     }
   }
 
-  Widget _buildTile(Widget child, {Function onTap}) {
+  Widget _buildTile(Widget child, {Function() onTap}) {
     return Material(
         elevation: 14.0,
         borderRadius: BorderRadius.circular(12.0),
         shadowColor: Color(0x802196F3),
         child: InkWell(
             // Do onTap() if it isn't null, otherwise do print()
-            onTap: () {
-              if (onTap != null) {
-                onTap();
-              }
-            },
+            onTap: onTap != null
+                ? () => onTap()
+                : () {
+                    print('Not set yet');
+                  },
             child: child));
-  }
-
-  onTapToCallFishPage() {
-    print("move to fish page");
-    Navigator.of(context).pushNamed(YcsRoute.fish);
   }
 }

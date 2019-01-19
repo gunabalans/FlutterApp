@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:me/config/ycs_route.dart';
-import 'package:me/util/db.dart';
-import 'package:me/util/translations.dart';
+import 'package:me_arun/config/ycs_route.dart';
+import 'package:me_arun/util/db.dart';
+import 'package:me_arun/util/translations.dart';
 
 class CommonDrawer extends StatefulWidget {
   _CommonDrawerState createState() => _CommonDrawerState();
@@ -13,25 +13,25 @@ class _CommonDrawerState extends State<CommonDrawer> {
   Widget mywidget;
   Widget img;
 
-  _CommonDrawerState() {
-    getDbData();
-  }
+  // _CommonDrawerState() {
+  //   getDbData();
+  // }
 
-  getDbData() {
-    if (authInfo == null) {
-      db.getData("auth").then((vl) {
-        if (vl == null) {
-          Navigator.popUntil(context, ModalRoute.withName(YcsRoute.home));
-        } else {
-          setState(() {
-            authInfo = vl;
-            img = Image.network(
-                'http://ycsnew.whyceeyes.com/wp-content/uploads/2018/09/YCSLOGO_150x-2.png');
-          });
-        }
-      });
-    }
-  }
+  // getDbData() {
+  //   if (authInfo == null) {
+  //     db.getData("auth").then((vl) {
+  //       if (vl == null) {
+  //         Navigator.popUntil(context, ModalRoute.withName(YcsRoute.home));
+  //       } else {
+  //         setState(() {
+  //           authInfo = vl;
+  //           img = Image.network(
+  //               'http://ycsnew.whyceeyes.com/wp-content/uploads/2018/09/YCSLOGO_150x-2.png');
+  //         });
+  //       }
+  //     });
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -43,15 +43,31 @@ class _CommonDrawerState extends State<CommonDrawer> {
           UserAccountsDrawerHeader(
             accountName: (authInfo != null && authInfo.containsKey('UserName'))
                 ? Text(authInfo['UserName'])
-                : Text(""),
+                : Text("Get fresh Fish"),
             accountEmail: (authInfo != null && authInfo.containsKey('Role'))
                 ? Text(authInfo['Role'])
-                : Text(""),
+                : Text("today"),
             currentAccountPicture: CircleAvatar(
               backgroundColor: Theme.of(context).backgroundColor,
-              child: img,
+              child: img != null ? img : Text("F"),
             ),
           ),
+          Container(
+              decoration: BoxDecoration(
+                  border: new Border(
+                      bottom: BorderSide(
+                color: Theme.of(context).dividerColor,
+              ))),
+              child: ListTile(
+                leading: Icon(
+                  Icons.home,
+                ),
+                title: Text(Translations.of(context).text("Home")),
+                onTap: () {
+                  Navigator.popUntil(
+                      context, ModalRoute.withName(YcsRoute.home));
+                },
+              )),
           Container(
               decoration: BoxDecoration(
                   border: new Border(
@@ -75,28 +91,13 @@ class _CommonDrawerState extends State<CommonDrawer> {
               ))),
               child: ListTile(
                 leading: Icon(
-                  Icons.person,
+                  Icons.shopping_cart,
                 ),
-                title: Text(Translations.of(context).text("Customer")),
+                title: Text(Translations.of(context).text("My Cart")),
                 onTap: () {
-                  Navigator.of(context).pushNamed(YcsRoute.customer);
+                  //Navigator.of(context).pushNamed("/cart");
                 },
               )),
-          // Container(
-          //     decoration: BoxDecoration(
-          //         border: new Border(
-          //             bottom: BorderSide(
-          //       color: Theme.of(context).dividerColor,
-          //     ))),
-          //     child: ListTile(
-          //       leading: Icon(
-          //         Icons.input,
-          //       ),
-          //       title: Text(Translations.of(context).text("Enquiry")),
-          //       onTap: () {
-          //         Navigator.of(context).pushNamed(YcsRoute.enquiry);
-          //       },
-          //     )),
           Container(
               decoration: BoxDecoration(
                   border: new Border(

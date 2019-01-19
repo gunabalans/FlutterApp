@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:me/util/translations.dart';
+import 'package:me_arun/util/translations.dart';
 
 class Template {
   /*

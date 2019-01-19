@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Config {
   //applcation title
-  static const applicationTitle = "YajurrTravell";
+  static const applicationTitle = "SeaFoods";
 
   static const String imageAssetPAth = "assets/images/";
 
@@ -15,7 +15,7 @@ class Config {
   //static const MaterialColor ui_color = Colors.red;
 
   //icons
-  static const ui_full_screen_logo_icon = Icons.directions_car;
+  static const ui_full_screen_logo_icon = Icons.fastfood;
 
   static const langSupport = {"en": "English", "ta": "தமிழ்"};
 //API call URLS
@@ -31,46 +31,15 @@ class Config {
 
   static const String url_customer = url_base + "/customer";
 
-//padding data
-  ///static double ui_full_screen_logo_icon_padding_top = 150.0;
+  static final Color primaryColor = const Color(0xFF66CCCC);
+  static final Color accentColour = const Color(0xFFD39200);
+  static final Color primaryColorDark = const Color(0xFF02577E);
 
-  //fillter color mode
-  //static Color colorFilterWithOpacity =  Colors.white.withOpacity(0.2);
+  static final Color backgroundColor = const Color(0xFFF0EFEA);
+  static final Color splashColor = const Color(0xFFF9E8A3);
 
-  //static final Color primarySwatch = Colors.purple;
-  static final Color primaryColor = Colors.purple[600];
-  static final Color accentColour = Colors.purple[300];
-  static final Color primaryColorDark = Colors.purple[800];
-
-  static final Color backgroundColor = Colors.white;
-  static final Color splashColor = Colors.white24;
-
-  static final Color primaryColor100 = Colors.purple[100];
-  static final Color warning = Colors.redAccent;
-
-// static final ThemeData myTheme = ThemeData(
-//     primarySwatch: primarySwatch,
-//     primaryColor: primaryColor,
-//     backgroundColor: backgroundColor,
-
-// // buttonTheme: ButtonThemeData(
-// //   shape: BeveledRectangleBorder(
-// //     borderRadius: BorderRadius.all(Radius.circular(2.0),
-// // ),
-
-//     textTheme: TextTheme(
-
-//       title: TextStyle(
-//         fontSize: 20.0,
-//         fontStyle: FontStyle.normal,
-//         fontWeight: FontWeight.bold,
-//         color: primaryColor,
-//         letterSpacing: 1.0
-//         ),
-
-//     ),
-
-//   );
+  static final Color primaryColor100 = const Color(0xFF7BD3DD);
+  static final Color warning = const Color(0xFF862400);
 
   static TextTheme _buildTextTheme(TextTheme base) {
     return base.copyWith(
@@ -81,6 +50,22 @@ class Config {
         fontWeight: FontWeight.bold,
         fontStyle: FontStyle.normal,
         fontSize: 20.0,
+      ),
+      body1: base.button.copyWith(
+        fontFamily: 'GoogleSans',
+        color: primaryColorDark,
+        letterSpacing: 1.0,
+        fontWeight: FontWeight.bold,
+        fontStyle: FontStyle.normal,
+        fontSize: 12.0,
+      ),
+      button: base.button.copyWith(
+        fontFamily: 'GoogleSans',
+        color: accentColour,
+        letterSpacing: 1.0,
+        fontWeight: FontWeight.bold,
+        fontStyle: FontStyle.normal,
+        fontSize: 14.0,
       ),
     );
   }
@@ -116,6 +101,7 @@ class Config {
 
     return base.copyWith(
       primaryColor: primaryColor,
+      primaryColorDark: primaryColorDark,
       primaryColorLight: accentColour,
       buttonColor: primaryColor,
       indicatorColor: backgroundColour,
