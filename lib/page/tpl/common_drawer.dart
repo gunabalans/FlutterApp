@@ -43,13 +43,15 @@ class _CommonDrawerState extends State<CommonDrawer> {
           UserAccountsDrawerHeader(
             accountName: (authInfo != null && authInfo.containsKey('UserName'))
                 ? Text(authInfo['UserName'])
-                : Text("Get fresh Fish"),
+                : Text(Translations.of(context).text("GetFreshFish")),
             accountEmail: (authInfo != null && authInfo.containsKey('Role'))
                 ? Text(authInfo['Role'])
-                : Text("today"),
+                : Text(Translations.of(context).text("Today")),
             currentAccountPicture: CircleAvatar(
               backgroundColor: Theme.of(context).backgroundColor,
-              child: img != null ? img : Text("F"),
+              child: img != null
+                  ? img
+                  : Text(Translations.of(context).text("Fish")),
             ),
           ),
           Container(
@@ -93,7 +95,7 @@ class _CommonDrawerState extends State<CommonDrawer> {
                 leading: Icon(
                   Icons.shopping_cart,
                 ),
-                title: Text(Translations.of(context).text("My Cart")),
+                title: Text(Translations.of(context).text("MyCart")),
                 onTap: () {
                   //Navigator.of(context).pushNamed("/cart");
                 },

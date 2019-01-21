@@ -1,7 +1,30 @@
 {
-  "title": "Sea Foods",
+  "title": "Sea Fish",
+  "GetIn":"Get In",
+  "SeaFish":"Sea Fish",
+  "mackerl":"Indian mackerl",
+  "Pomfret":"Pomfret",
+  "Tuna":"Tuna",
+  "RedSnapper":"Red Snapper",
+
+  "Piece":"Piece",
+  "Kg":"Kg",
+
+  "Fish":"Fish",
+  "GetFreshFish":"Get Fresh Fish",
+  "Today":"Today",
+  "Home":"Home",
+  "MyCart":"My Cart",
+  "Dashboard":"Fish Variety",
   
-  "Dashboard":"Dashboard",
+  "FreshPrawn":"Fresh Prawn",
+"FreshFish":"Fresh Fish",
+"LiveCrab":"Live Crab",
+"FreshSquid":"Fresh Squid",
+"LiveLobster":"Live Lobster",
+
+"StartsAt":"starts At",
+  
   "Language":"Language",
   "Customer":"Customer",
   "Enquiry":"Enquiry",
@@ -63,7 +86,7 @@
 
   "BookingCount":"Bookings",
   "Revenue":"Revenue",
-  "Today":"Today",
+  
   "Work":"Work",
   "Ycs":"Ycs",
   "user":"User",

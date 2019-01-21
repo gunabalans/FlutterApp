@@ -49,7 +49,7 @@ class _DashboardPageState extends State<DashboardPage> {
                             left: 10.0,
                             top: 10.0,
                             child: Text(
-                                Translations.of(context).text("Fresh prawn"),
+                                Translations.of(context).text("FreshPrawn"),
                                 style: TextStyle(
                                     color: Theme.of(context).accentColor)),
                           ),
@@ -57,8 +57,9 @@ class _DashboardPageState extends State<DashboardPage> {
                             right: 10.0,
                             bottom: 10.0,
                             child: Text(
-                                Translations.of(context)
-                                    .text("Starts at 500 / Kg"),
+                                Translations.of(context).text("StartsAt") +
+                                    " 600 / " +
+                                    Translations.of(context).text("Kg"),
                                 style: TextStyle(
                                     color: Theme.of(context).accentColor)),
                           ),
@@ -80,7 +81,7 @@ class _DashboardPageState extends State<DashboardPage> {
                               left: 10.0,
                               top: 10.0,
                               child: Text(
-                                  Translations.of(context).text("Fresh Fish"),
+                                  Translations.of(context).text("FreshFish"),
                                   style: TextStyle(
                                       color:
                                           Theme.of(context).primaryColorDark)),
@@ -89,8 +90,9 @@ class _DashboardPageState extends State<DashboardPage> {
                               right: 10.0,
                               bottom: 10.0,
                               child: Text(
-                                  Translations.of(context)
-                                      .text("Starts at 350 / Kg"),
+                                  Translations.of(context).text("StartsAt") +
+                                      " 350 / " +
+                                      Translations.of(context).text("Kg"),
                                   style: TextStyle(
                                       color:
                                           Theme.of(context).primaryColorDark)),
@@ -113,7 +115,7 @@ class _DashboardPageState extends State<DashboardPage> {
                             left: 10.0,
                             top: 10.0,
                             child: Text(
-                                Translations.of(context).text("Live Crab"),
+                                Translations.of(context).text("LiveCrab"),
                                 style: TextStyle(
                                     color: Theme.of(context).accentColor)),
                           ),
@@ -121,8 +123,9 @@ class _DashboardPageState extends State<DashboardPage> {
                             right: 10.0,
                             bottom: 10.0,
                             child: Text(
-                                Translations.of(context)
-                                    .text("Starts at 500 / Kg"),
+                                Translations.of(context).text("StartsAt") +
+                                    "300 / " +
+                                    Translations.of(context).text("Kg"),
                                 style: TextStyle(
                                     color: Theme.of(context).accentColor)),
                           ),
@@ -144,7 +147,7 @@ class _DashboardPageState extends State<DashboardPage> {
                             left: 10.0,
                             top: 10.0,
                             child: Text(
-                                Translations.of(context).text("Fresh Squid"),
+                                Translations.of(context).text("FreshSquid"),
                                 style:
                                     TextStyle(color: Config.primaryColorDark)),
                           ),
@@ -152,8 +155,9 @@ class _DashboardPageState extends State<DashboardPage> {
                             right: 10.0,
                             bottom: 10.0,
                             child: Text(
-                                Translations.of(context)
-                                    .text("Starts at 400 / Kg"),
+                                Translations.of(context).text("StartsAt") +
+                                    "400 / " +
+                                    Translations.of(context).text("Kg"),
                                 style:
                                     TextStyle(color: Config.primaryColorDark)),
                           ),
@@ -175,7 +179,7 @@ class _DashboardPageState extends State<DashboardPage> {
                             left: 10.0,
                             top: 10.0,
                             child: Text(
-                                Translations.of(context).text("Live Lobster"),
+                                Translations.of(context).text("LiveLobster"),
                                 style: TextStyle(
                                     color: Theme.of(context).accentColor)),
                           ),
@@ -183,8 +187,9 @@ class _DashboardPageState extends State<DashboardPage> {
                             right: 10.0,
                             bottom: 10.0,
                             child: Text(
-                                Translations.of(context)
-                                    .text("Starts at 500 / Kg"),
+                                Translations.of(context).text("StartsAt") +
+                                    "700 / " +
+                                    Translations.of(context).text("Kg"),
                                 style: TextStyle(
                                     color: Theme.of(context).accentColor)),
                           ),

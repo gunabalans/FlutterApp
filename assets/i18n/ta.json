@@ -1,7 +1,31 @@
 {
-  "title": "Sea Foods",
+  "title": "கடல் மீன்",
+  "GetIn":"உள்ளே செல்ல",
+  "SeaFish":"கடல் மீன்",
+  "mackerl":"கானாங்கெளுத்தி",
+  "Pomfret":"வவ்வா",
+  "Tuna":"சூரை",
+  "RedSnapper":"சங்கரா",
+
+  "Piece":"பீஸ்",
+  "Kg":"கிலோ",
+
+  "Fish":"மீன்",
+  "GetFreshFish":"புதிய மீன் கிடைக்கும்",
+  "Today":"இன்று",
+  "Home":"முகப்பு",
+  "MyCart":"மீன் பை",
+  "Dashboard":"மீன் வகைகள்",
   
-  "Dashboard":"டாஷ் போர்டு",
+  "FreshPrawn":"புதிய இறால்",
+  "FreshFish":"மீன்",
+  "LiveCrab":"நண்டு",
+  "FreshSquid":"கணவா",
+  "LiveLobster":"சிங்கி இறால்",
+
+  "StartsAt":"விலை",
+
+  
   "Language":"மொழி",
   "Customer": "வாடிக்கையாளர்",
   "Enquiry": "விசாரணை",
@@ -58,7 +82,7 @@
 
   "BookingCount":"முன்பதிவுகள்",
   "Revenue":"வருவாய்",
-  "Today":"இன்றைய",
+  
   "Work":"வேலை",
   "Ycs":"Ycs",
   "user":"பயனர்",

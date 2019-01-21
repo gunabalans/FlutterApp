@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       onGenerateTitle: (BuildContext context) =>
           Translations.of(context).text("title"),
 
-      debugShowCheckedModeBanner: true, //dev
+      debugShowCheckedModeBanner: false, //pro
       //showPerformanceOverlay: true, //dev
       //debugShowMaterialGrid: true,
       home: new LandingPage(),

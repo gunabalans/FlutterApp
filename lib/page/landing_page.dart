@@ -105,7 +105,7 @@ class LandingPageState extends State<LandingPage> {
                 SizedBox(height: 60.0),
                 ff.formButton(
                     context: context,
-                    label: "Get In",
+                    label: Translations.of(context).text("GetIn"),
                     color: Theme.of(context).backgroundColor,
                     textColor: Theme.of(context).primaryColor,
                     onPressed: () {
