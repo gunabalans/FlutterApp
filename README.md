@@ -1,6 +1,6 @@
 # me_arun
 
-A new Flutter project.
+A new Flutter project for fish sales online.
 
 ## Getting Started
 
